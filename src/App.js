@@ -1,12 +1,10 @@
-// src/App.js
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationBar from './Components/Navbar';
-import Feed from './Components/Feed';
-import Profile from './Components/Profile';
-import About from './Components/About';
-import Settings from './Components/Settings';
+import NavigationBar from './Components/Navbar/Navbar';
+import Feed from './Components/Feed/Feed';
+import Profile from './Components/Profile/Profile';
+import About from './Components/About/About';
+import Settings from './Components/Settings/Settings';
 
 const App = () => {
   return (

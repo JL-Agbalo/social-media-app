@@ -1,0 +1,14 @@
+/* src/Components/LeftSidebar.css */
+.profile-picture {
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 50%; /* Makes the image circular */
+    margin: 0 auto; /* Centers the image */
+  }
+  
+  .profile-picture img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+  }
+  

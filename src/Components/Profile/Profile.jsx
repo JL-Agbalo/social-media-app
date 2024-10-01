@@ -1,11 +1,17 @@
-// src/Components/LeftSidebar.js
-
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 
-const LeftSidebar = ({ user }) => {
+const Profile = () => {
+  const user = {
+    id: 1,
+    name: 'John Doe',
+    username: 'johndoe',
+    bio: 'Lorem ipsum dolor sit amet.',
+    profilePicture: 'https://via.placeholder.com/150', 
+  };
+
   return (
-    <div className="left-sidebar">
+    <Container fluid className="mt-4">
       <Card>
         <Card.Img variant="top" src={user.profilePicture} />
         <Card.Body>
@@ -14,8 +20,8 @@ const LeftSidebar = ({ user }) => {
           <Card.Text>{user.bio}</Card.Text>
         </Card.Body>
       </Card>
-    </div>
+    </Container>
   );
 };
 
-export default LeftSidebar;
+export default Profile;

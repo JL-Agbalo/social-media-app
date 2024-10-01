@@ -1,5 +1,3 @@
-// src/Components/About.js
-
 import React from 'react';
 
 const About = () => {

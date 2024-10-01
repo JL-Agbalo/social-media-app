@@ -1,18 +1,16 @@
-/* src/App.css */
-
 .left-sidebar, .right-sidebar {
   padding: 20px;
-  background-color: #f8f9fa; /* Adjust color as needed */
-  height: 100vh; /* Full height for sidebars */
+  background-color: #f8f9fa; 
+  height: 100vh; 
 }
 
 .left-sidebar {
-  position: fixed; /* Fix to the left */
-  width: 20%; /* Set width */
+  position: fixed; 
+  width: 20%; 
 }
 
 .right-sidebar {
-  position: fixed; /* Fix to the right */
-  right: 0; /* Align to the right */
-  width: 20%; /* Set width */
+  position: fixed; 
+  right: 0; 
+  width: 20%; 
 }
