@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import LeftSidebar from '../LeftSidebar/LeftSidebar';
 import RightSidebar from '../RightSIdebar/RightSidebar';
 import Post from '../Post/Post';
+import PostFeed from '../PostFeed/PostFeed';
 
 const Feed = () => {
   const user = {
@@ -40,6 +41,10 @@ const Feed = () => {
     },
   ]);
 
+  const handleNewPost = (newPost) => {
+    setPosts([newPost, ...posts]); // Add new post to the top of the posts array
+  };
+
   return (
     <Container>
       <Row>
@@ -47,7 +52,7 @@ const Feed = () => {
           <LeftSidebar user={user} />
         </Col>
         <Col md={6}>
-          {/* <h2>Feed</h2> */}
+          <PostFeed onNewPost={handleNewPost} /> {/* Add PostFeed component here */}
           {posts.map((post) => (
             <Post key={post.id} post={post} />
           ))}
