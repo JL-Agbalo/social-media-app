@@ -1,20 +1,32 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import SearchBar from '../Search/Search';
+import Notifications from '../Notifications/Notifications';
+import Settings from '../Settings/Settings';
+import Container from 'react-bootstrap/Container';
 
 const NavigationBar = () => {
+  const handleSearch = (query) => {
+    console.log('Search query:', query);
+  };
+
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand as={Link} to="/">Social Media App</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/feed">Feed</Nav.Link>
-          <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
-          <Nav.Link as={Link} to="/about">About</Nav.Link>
-          <Nav.Link as={Link} to="/settings">Settings</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+    <Navbar expand="lg" className="bg-body-tertiary mb-2">
+      <Container>
+        <div className="d-flex align-items-center">
+          <Navbar.Brand href="#home" className="">Social Media App</Navbar.Brand>
+          <SearchBar onSearch={handleSearch} />
+        </div>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Notifications />
+            <Settings />
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };

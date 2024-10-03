@@ -4,7 +4,6 @@ import NavigationBar from './Components/Navbar/Navbar';
 import Feed from './Components/Feed/Feed';
 import Profile from './Components/Profile/Profile';
 import About from './Components/About/About';
-import Settings from './Components/Settings/Settings';
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
         <Route path="/feed" element={<Feed />} /> 
         <Route path="/profile" element={<Profile />} />
         <Route path="/about" element={<About />} />
-        <Route path="/settings" element={<Settings />} />
         <Route path="/" element={<Feed />} /> 
       </Routes>
     </Router>

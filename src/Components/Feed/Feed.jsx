@@ -41,13 +41,13 @@ const Feed = () => {
   ]);
 
   return (
-    <Container fluid>
+    <Container>
       <Row>
         <Col md={3}>
           <LeftSidebar user={user} />
         </Col>
         <Col md={6}>
-          <h2>Feed</h2>
+          {/* <h2>Feed</h2> */}
           {posts.map((post) => (
             <Post key={post.id} post={post} />
           ))}
